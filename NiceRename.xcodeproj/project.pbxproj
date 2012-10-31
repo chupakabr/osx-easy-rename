@@ -1,0 +1,314 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3E35F14514BEE7A400AA2F5C /* default.icns in Resources */ = {isa = PBXBuildFile; fileRef = 3E35F14414BEE7A400AA2F5C /* default.icns */; };
+		3EB7F9FA13BDF6AB00BCDAAD /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EB7F9F913BDF6AB00BCDAAD /* Cocoa.framework */; };
+		3EB7FA0413BDF6AB00BCDAAD /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3EB7FA0213BDF6AB00BCDAAD /* Localizable.strings */; };
+		3EB7FA0713BDF6AB00BCDAAD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EB7FA0613BDF6AB00BCDAAD /* main.m */; };
+		3EB7FA0A13BDF6AB00BCDAAD /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 3EB7FA0813BDF6AB00BCDAAD /* Credits.rtf */; };
+		3EB7FA0D13BDF6AB00BCDAAD /* NiceRenameAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EB7FA0C13BDF6AB00BCDAAD /* NiceRenameAppDelegate.m */; };
+		3EB7FA1013BDF6AB00BCDAAD /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3EB7FA0E13BDF6AB00BCDAAD /* MainMenu.xib */; };
+		3EB7FA1813BDFABA00BCDAAD /* AppController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EB7FA1713BDFABA00BCDAAD /* AppController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		3E35F14414BEE7A400AA2F5C /* default.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = default.icns; sourceTree = "<group>"; };
+		3EB7F9F513BDF6AB00BCDAAD /* EasyRename.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EasyRename.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3EB7F9F913BDF6AB00BCDAAD /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		3EB7F9FC13BDF6AB00BCDAAD /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		3EB7F9FD13BDF6AB00BCDAAD /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		3EB7F9FE13BDF6AB00BCDAAD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		3EB7FA0113BDF6AB00BCDAAD /* NiceRename-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "NiceRename-Info.plist"; sourceTree = "<group>"; };
+		3EB7FA0313BDF6AB00BCDAAD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		3EB7FA0513BDF6AB00BCDAAD /* NiceRename-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NiceRename-Prefix.pch"; sourceTree = "<group>"; };
+		3EB7FA0613BDF6AB00BCDAAD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		3EB7FA0913BDF6AB00BCDAAD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		3EB7FA0B13BDF6AB00BCDAAD /* NiceRenameAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NiceRenameAppDelegate.h; sourceTree = "<group>"; };
+		3EB7FA0C13BDF6AB00BCDAAD /* NiceRenameAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NiceRenameAppDelegate.m; sourceTree = "<group>"; };
+		3EB7FA0F13BDF6AB00BCDAAD /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		3EB7FA1613BDFABA00BCDAAD /* AppController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppController.h; sourceTree = "<group>"; };
+		3EB7FA1713BDFABA00BCDAAD /* AppController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppController.m; sourceTree = "<group>"; };
+		3EEDF55B14BCD43A00D62825 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
+		3EEDF55C14BCD44200D62825 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = ru; path = ru.lproj/Credits.rtf; sourceTree = "<group>"; };
+		3EEDF55E14BCDC0200D62825 /* ru */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ru; path = ru.lproj/MainMenu.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3EB7F9F213BDF6AB00BCDAAD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3EB7F9FA13BDF6AB00BCDAAD /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3EB7F9EA13BDF6AB00BCDAAD = {
+			isa = PBXGroup;
+			children = (
+				3EB7F9FF13BDF6AB00BCDAAD /* NiceRename */,
+				3EB7F9F813BDF6AB00BCDAAD /* Frameworks */,
+				3EB7F9F613BDF6AB00BCDAAD /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3EB7F9F613BDF6AB00BCDAAD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3EB7F9F513BDF6AB00BCDAAD /* EasyRename.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3EB7F9F813BDF6AB00BCDAAD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3EB7F9F913BDF6AB00BCDAAD /* Cocoa.framework */,
+				3EB7F9FB13BDF6AB00BCDAAD /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3EB7F9FB13BDF6AB00BCDAAD /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3EB7F9FC13BDF6AB00BCDAAD /* AppKit.framework */,
+				3EB7F9FD13BDF6AB00BCDAAD /* CoreData.framework */,
+				3EB7F9FE13BDF6AB00BCDAAD /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		3EB7F9FF13BDF6AB00BCDAAD /* NiceRename */ = {
+			isa = PBXGroup;
+			children = (
+				3EB7FA0B13BDF6AB00BCDAAD /* NiceRenameAppDelegate.h */,
+				3EB7FA0C13BDF6AB00BCDAAD /* NiceRenameAppDelegate.m */,
+				3EB7FA1613BDFABA00BCDAAD /* AppController.h */,
+				3EB7FA1713BDFABA00BCDAAD /* AppController.m */,
+				3EB7FA0013BDF6AB00BCDAAD /* Supporting Files */,
+			);
+			path = NiceRename;
+			sourceTree = "<group>";
+		};
+		3EB7FA0013BDF6AB00BCDAAD /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3E35F14414BEE7A400AA2F5C /* default.icns */,
+				3EB7FA0E13BDF6AB00BCDAAD /* MainMenu.xib */,
+				3EB7FA0113BDF6AB00BCDAAD /* NiceRename-Info.plist */,
+				3EB7FA0213BDF6AB00BCDAAD /* Localizable.strings */,
+				3EB7FA0513BDF6AB00BCDAAD /* NiceRename-Prefix.pch */,
+				3EB7FA0613BDF6AB00BCDAAD /* main.m */,
+				3EB7FA0813BDF6AB00BCDAAD /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3EB7F9F413BDF6AB00BCDAAD /* EasyRename */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3EB7FA1313BDF6AB00BCDAAD /* Build configuration list for PBXNativeTarget "EasyRename" */;
+			buildPhases = (
+				3EB7F9F113BDF6AB00BCDAAD /* Sources */,
+				3EB7F9F213BDF6AB00BCDAAD /* Frameworks */,
+				3EB7F9F313BDF6AB00BCDAAD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EasyRename;
+			productName = NiceRename;
+			productReference = 3EB7F9F513BDF6AB00BCDAAD /* EasyRename.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3EB7F9EC13BDF6AB00BCDAAD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				ORGANIZATIONNAME = 7bit;
+			};
+			buildConfigurationList = 3EB7F9EF13BDF6AB00BCDAAD /* Build configuration list for PBXProject "NiceRename" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				ru,
+			);
+			mainGroup = 3EB7F9EA13BDF6AB00BCDAAD;
+			productRefGroup = 3EB7F9F613BDF6AB00BCDAAD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3EB7F9F413BDF6AB00BCDAAD /* EasyRename */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3EB7F9F313BDF6AB00BCDAAD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3EB7FA0413BDF6AB00BCDAAD /* Localizable.strings in Resources */,
+				3EB7FA0A13BDF6AB00BCDAAD /* Credits.rtf in Resources */,
+				3EB7FA1013BDF6AB00BCDAAD /* MainMenu.xib in Resources */,
+				3E35F14514BEE7A400AA2F5C /* default.icns in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3EB7F9F113BDF6AB00BCDAAD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3EB7FA0713BDF6AB00BCDAAD /* main.m in Sources */,
+				3EB7FA0D13BDF6AB00BCDAAD /* NiceRenameAppDelegate.m in Sources */,
+				3EB7FA1813BDFABA00BCDAAD /* AppController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		3EB7FA0213BDF6AB00BCDAAD /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3EB7FA0313BDF6AB00BCDAAD /* en */,
+				3EEDF55B14BCD43A00D62825 /* ru */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		3EB7FA0813BDF6AB00BCDAAD /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3EB7FA0913BDF6AB00BCDAAD /* en */,
+				3EEDF55C14BCD44200D62825 /* ru */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		3EB7FA0E13BDF6AB00BCDAAD /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3EB7FA0F13BDF6AB00BCDAAD /* en */,
+				3EEDF55E14BCDC0200D62825 /* ru */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3EB7FA1113BDF6AB00BCDAAD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.5;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx10.6;
+			};
+			name = Debug;
+		};
+		3EB7FA1213BDF6AB00BCDAAD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.5;
+				SDKROOT = macosx10.6;
+			};
+			name = Release;
+		};
+		3EB7FA1413BDF6AB00BCDAAD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_IDENTITY = "3rd Party Mac Developer Application";
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NiceRename/NiceRename-Prefix.pch";
+				INFOPLIST_FILE = "NiceRename/NiceRename-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.5;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SDKROOT = macosx;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		3EB7FA1513BDF6AB00BCDAAD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_IDENTITY = "3rd Party Mac Developer Application";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NiceRename/NiceRename-Prefix.pch";
+				INFOPLIST_FILE = "NiceRename/NiceRename-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.5;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SDKROOT = macosx;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3EB7F9EF13BDF6AB00BCDAAD /* Build configuration list for PBXProject "NiceRename" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3EB7FA1113BDF6AB00BCDAAD /* Debug */,
+				3EB7FA1213BDF6AB00BCDAAD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3EB7FA1313BDF6AB00BCDAAD /* Build configuration list for PBXNativeTarget "EasyRename" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3EB7FA1413BDF6AB00BCDAAD /* Debug */,
+				3EB7FA1513BDF6AB00BCDAAD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3EB7F9EC13BDF6AB00BCDAAD /* Project object */;
+}

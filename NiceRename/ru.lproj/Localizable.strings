@@ -1,0 +1,8 @@
+/* Localized versions of Info.plist keys */
+
+"Directory must be specified" = "Не указана папка с файлами";
+"Filename text must be set" = "Поле \"Имя файла содержит\" не может быть пустым";
+"Renaming..." = "Переименовываем...";
+"Files were renamed successfully" = "Файлы были успешно переименованы";
+"Not all files have been renamed" = "Не все файлы удалось переименовать";
+"Cannot rename files" = "Не удалось переименовать файлы";
