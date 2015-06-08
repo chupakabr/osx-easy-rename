@@ -141,6 +141,11 @@
 			attributes = {
 				LastUpgradeCheck = 0630;
 				ORGANIZATIONNAME = 7bit;
+				TargetAttributes = {
+					3EB7F9F413BDF6AB00BCDAAD = {
+						DevelopmentTeam = 5JWCG4D3RR;
+					};
+				};
 			};
 			buildConfigurationList = 3EB7F9EF13BDF6AB00BCDAAD /* Build configuration list for PBXProject "NiceRename" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -276,7 +281,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CODE_SIGN_IDENTITY = "3rd Party Mac Developer Application";
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
