@@ -58,8 +58,8 @@
     [dlg setCanChooseFiles:NO];
     [dlg setCanChooseDirectories:YES];
     [dlg setAllowsMultipleSelection:NO];
-    
-    if ([dlg runModalForDirectory:nil file:nil] == NSOKButton) {
+
+    if ([dlg runModal] == NSOKButton) {
         // Update text field with selected directory
         NSArray *urls = [dlg URLs];
         if (urls) {
