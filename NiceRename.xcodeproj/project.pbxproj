@@ -12,9 +12,13 @@
 		3EB7FA0413BDF6AB00BCDAAD /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3EB7FA0213BDF6AB00BCDAAD /* Localizable.strings */; };
 		3EB7FA0713BDF6AB00BCDAAD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EB7FA0613BDF6AB00BCDAAD /* main.m */; };
 		3EB7FA0A13BDF6AB00BCDAAD /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 3EB7FA0813BDF6AB00BCDAAD /* Credits.rtf */; };
-		3EB7FA0D13BDF6AB00BCDAAD /* NiceRenameAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EB7FA0C13BDF6AB00BCDAAD /* NiceRenameAppDelegate.m */; };
 		3EB7FA1013BDF6AB00BCDAAD /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3EB7FA0E13BDF6AB00BCDAAD /* MainMenu.xib */; };
-		3EB7FA1813BDFABA00BCDAAD /* AppController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EB7FA1713BDFABA00BCDAAD /* AppController.m */; };
+		3EFD5CB621B46E0000B12818 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EFD5CB521B46E0000B12818 /* AppDelegate.swift */; };
+		3EFD5CB821B473B600B12818 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EFD5CB721B473B600B12818 /* MainViewController.swift */; };
+		3EFD5CBA21B47C1000B12818 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EFD5CB921B47C1000B12818 /* Notifications.swift */; };
+		3EFD5CBC21B47EB600B12818 /* ErrorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EFD5CBB21B47EB600B12818 /* ErrorType.swift */; };
+		3EFD5CBE21B47F1900B12818 /* RenameType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EFD5CBD21B47F1900B12818 /* RenameType.swift */; };
+		3EFD5CC321B481BF00B12818 /* Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EFD5CC221B481BF00B12818 /* Localization.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,14 +33,17 @@
 		3EB7FA0513BDF6AB00BCDAAD /* NiceRename-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NiceRename-Prefix.pch"; sourceTree = "<group>"; };
 		3EB7FA0613BDF6AB00BCDAAD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		3EB7FA0913BDF6AB00BCDAAD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
-		3EB7FA0B13BDF6AB00BCDAAD /* NiceRenameAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NiceRenameAppDelegate.h; sourceTree = "<group>"; };
-		3EB7FA0C13BDF6AB00BCDAAD /* NiceRenameAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NiceRenameAppDelegate.m; sourceTree = "<group>"; };
 		3EB7FA0F13BDF6AB00BCDAAD /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
-		3EB7FA1613BDFABA00BCDAAD /* AppController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppController.h; sourceTree = "<group>"; };
-		3EB7FA1713BDFABA00BCDAAD /* AppController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppController.m; sourceTree = "<group>"; };
 		3EEDF55B14BCD43A00D62825 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		3EEDF55C14BCD44200D62825 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = ru; path = ru.lproj/Credits.rtf; sourceTree = "<group>"; };
 		3EEDF55E14BCDC0200D62825 /* ru */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ru; path = ru.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		3EFD5CB421B46DFF00B12818 /* EasyRename-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "EasyRename-Bridging-Header.h"; sourceTree = "<group>"; };
+		3EFD5CB521B46E0000B12818 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		3EFD5CB721B473B600B12818 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		3EFD5CB921B47C1000B12818 /* Notifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notifications.swift; sourceTree = "<group>"; };
+		3EFD5CBB21B47EB600B12818 /* ErrorType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorType.swift; sourceTree = "<group>"; };
+		3EFD5CBD21B47F1900B12818 /* RenameType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RenameType.swift; sourceTree = "<group>"; };
+		3EFD5CC221B481BF00B12818 /* Localization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localization.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,10 +97,7 @@
 		3EB7F9FF13BDF6AB00BCDAAD /* NiceRename */ = {
 			isa = PBXGroup;
 			children = (
-				3EB7FA0B13BDF6AB00BCDAAD /* NiceRenameAppDelegate.h */,
-				3EB7FA0C13BDF6AB00BCDAAD /* NiceRenameAppDelegate.m */,
-				3EB7FA1613BDFABA00BCDAAD /* AppController.h */,
-				3EB7FA1713BDFABA00BCDAAD /* AppController.m */,
+				3EFD5CB321B46DF000B12818 /* App */,
 				3EB7FA0013BDF6AB00BCDAAD /* Supporting Files */,
 			);
 			path = NiceRename;
@@ -103,6 +107,7 @@
 			isa = PBXGroup;
 			children = (
 				3E35F14414BEE7A400AA2F5C /* default.icns */,
+				3EFD5CB421B46DFF00B12818 /* EasyRename-Bridging-Header.h */,
 				3EB7FA0E13BDF6AB00BCDAAD /* MainMenu.xib */,
 				3EB7FA0113BDF6AB00BCDAAD /* NiceRename-Info.plist */,
 				3EB7FA0213BDF6AB00BCDAAD /* Localizable.strings */,
@@ -111,6 +116,35 @@
 				3EB7FA0813BDF6AB00BCDAAD /* Credits.rtf */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3EFD5CB321B46DF000B12818 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				3EFD5CC021B47F3600B12818 /* Model */,
+				3EFD5CC121B47F4F00B12818 /* UI */,
+				3EFD5CB521B46E0000B12818 /* AppDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		3EFD5CC021B47F3600B12818 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3EFD5CBB21B47EB600B12818 /* ErrorType.swift */,
+				3EFD5CC221B481BF00B12818 /* Localization.swift */,
+				3EFD5CB921B47C1000B12818 /* Notifications.swift */,
+				3EFD5CBD21B47F1900B12818 /* RenameType.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3EFD5CC121B47F4F00B12818 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				3EFD5CB721B473B600B12818 /* MainViewController.swift */,
+			);
+			path = UI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -144,6 +178,7 @@
 				TargetAttributes = {
 					3EB7F9F413BDF6AB00BCDAAD = {
 						DevelopmentTeam = 5JWCG4D3RR;
+						LastSwiftMigration = 1010;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -185,9 +220,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3EFD5CBA21B47C1000B12818 /* Notifications.swift in Sources */,
+				3EFD5CBC21B47EB600B12818 /* ErrorType.swift in Sources */,
+				3EFD5CB621B46E0000B12818 /* AppDelegate.swift in Sources */,
 				3EB7FA0713BDF6AB00BCDAAD /* main.m in Sources */,
-				3EB7FA0D13BDF6AB00BCDAAD /* NiceRenameAppDelegate.m in Sources */,
-				3EB7FA1813BDFABA00BCDAAD /* AppController.m in Sources */,
+				3EFD5CBE21B47F1900B12818 /* RenameType.swift in Sources */,
+				3EFD5CC321B481BF00B12818 /* Localization.swift in Sources */,
+				3EFD5CB821B473B600B12818 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -305,6 +344,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
@@ -316,12 +357,16 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "NiceRename/NiceRename-Prefix.pch";
 				INFOPLIST_FILE = "NiceRename/NiceRename-Info.plist";
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				PRODUCT_BUNDLE_IDENTIFIER = ru.chupakabr.dev.macos.NiceRename;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = macosx;
+				SWIFT_OBJC_BRIDGING_HEADER = "NiceRename/EasyRename-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -330,6 +375,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
@@ -341,12 +388,15 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "NiceRename/NiceRename-Prefix.pch";
 				INFOPLIST_FILE = "NiceRename/NiceRename-Info.plist";
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				PRODUCT_BUNDLE_IDENTIFIER = ru.chupakabr.dev.macos.NiceRename;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = macosx;
+				SWIFT_OBJC_BRIDGING_HEADER = "NiceRename/EasyRename-Bridging-Header.h";
+				SWIFT_VERSION = 4.2;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
