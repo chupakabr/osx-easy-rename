@@ -11,5 +11,5 @@ import Foundation
 enum RenameType: Int {
     case files = 0
     case folders = 1
-    case both = 2
+    case all = 2
 }

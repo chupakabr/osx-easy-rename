@@ -8,13 +8,13 @@
 
 import AppKit
 
-enum ErrorType: Int {
-    case unknown = 9
-    case partially = 1
+enum RenamingErrorType {
+    case partially
+    case filesystem
 }
 
 protocol RenamingServiceProtocol {
-    typealias Completion = (_ error: ErrorType?) -> Void
+    typealias Completion = (_ error: RenamingErrorType?) -> Void
 
     func rename(type: RenameType,
                 in directoryPath: String,
@@ -64,7 +64,7 @@ final class RenamingService: RenamingServiceProtocol {
                         needRename = isDir.boolValue == false
                     case .folders:
                         needRename = isDir.boolValue == true
-                    case .both:
+                    case .all:
                         needRename = true
                     }
 
@@ -86,9 +86,9 @@ final class RenamingService: RenamingServiceProtocol {
             hasErrors = true
         }
 
-        let error: ErrorType? = {
+        let error: RenamingErrorType? = {
             guard hasErrors else { return nil }
-            return processedFiles > 0 ? .partially : .unknown
+            return processedFiles > 0 ? .partially : .filesystem
         }()
         completion(error)
     }

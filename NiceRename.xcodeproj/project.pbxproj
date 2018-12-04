@@ -17,7 +17,6 @@
 		3EB7FA1013BDF6AB00BCDAAD /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3EB7FA0E13BDF6AB00BCDAAD /* MainMenu.xib */; };
 		3EFD5CB621B46E0000B12818 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EFD5CB521B46E0000B12818 /* AppDelegate.swift */; };
 		3EFD5CB821B473B600B12818 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EFD5CB721B473B600B12818 /* MainViewController.swift */; };
-		3EFD5CBA21B47C1000B12818 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EFD5CB921B47C1000B12818 /* Notifications.swift */; };
 		3EFD5CBE21B47F1900B12818 /* RenameType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EFD5CBD21B47F1900B12818 /* RenameType.swift */; };
 		3EFD5CC321B481BF00B12818 /* Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EFD5CC221B481BF00B12818 /* Localization.swift */; };
 /* End PBXBuildFile section */
@@ -43,7 +42,6 @@
 		3EFD5CB421B46DFF00B12818 /* EasyRename-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "EasyRename-Bridging-Header.h"; sourceTree = "<group>"; };
 		3EFD5CB521B46E0000B12818 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3EFD5CB721B473B600B12818 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
-		3EFD5CB921B47C1000B12818 /* Notifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notifications.swift; sourceTree = "<group>"; };
 		3EFD5CBD21B47F1900B12818 /* RenameType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RenameType.swift; sourceTree = "<group>"; };
 		3EFD5CC221B481BF00B12818 /* Localization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localization.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -152,7 +150,6 @@
 			children = (
 				3E79033121B5F7BB002CE907 /* Services */,
 				3E79032F21B5F563002CE907 /* MainViewModel.swift */,
-				3EFD5CB921B47C1000B12818 /* Notifications.swift */,
 				3EFD5CBD21B47F1900B12818 /* RenameType.swift */,
 			);
 			path = Model;
@@ -239,7 +236,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3EFD5CBA21B47C1000B12818 /* Notifications.swift in Sources */,
 				3EFD5CB621B46E0000B12818 /* AppDelegate.swift in Sources */,
 				3EB7FA0713BDF6AB00BCDAAD /* main.m in Sources */,
 				3E79033321B5F7CB002CE907 /* RenamingService.swift in Sources */,

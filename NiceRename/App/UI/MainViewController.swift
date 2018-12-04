@@ -10,9 +10,26 @@ import AppKit
 
 @objc
 final class MainViewController: NSObject {
+    private enum State {
+        case idle
+        case error(type: ErrorType)
+        case processing
+    }
 
-    private let notificationCenter = NotificationCenter.default
     private let viewModel: MainViewModelProtocol
+
+    private var state: State = .idle {
+        didSet {
+            switch state {
+            case .idle:
+                self.moveToIdleState()
+            case .error(let errorType):
+                self.moveToErrorState(type: errorType)
+            case .processing:
+                self.moveToProcessingState()
+            }
+        }
+    }
 
     // MARK: - IB Outlets
 
@@ -50,47 +67,34 @@ final class MainViewController: NSObject {
 
     @IBAction
     func rename(_ sender: Any) {
-        if self.browseTextField.stringValue.isEmpty {
-            self.statusTextField.stringValue = "Directory must be specified".localized
+        self.state = .processing
+
+        let directoryPath = self.browseTextField.stringValue
+        guard !directoryPath.isEmpty else {
+            self.state = .error(type: .missingDirectory)
             return
         }
 
-        if self.renameThisTextField.stringValue.isEmpty {
-            self.statusTextField.textColor = .red
-            self.statusTextField.stringValue = "Filename text must be set".localized
+        let occurrences = self.renameThisTextField.stringValue
+        guard !occurrences.isEmpty else {
+            self.state = .error(type: .missingPattern)
             return
         }
 
-        self.statusTextField.textColor = .controlTextColor
-        self.statusTextField.stringValue = "Renaming...".localized
+        guard let renameType = RenameType(rawValue: self.fileType.selectedColumn) else {
+            self.state = .error(type: .unknown)
+            return
+        }
 
-        self.progressIndicator.isHidden = false
-        self.progressIndicator.startAnimation(self)
+        let replacement = self.replaceWithTextField.stringValue
 
-        // Disable UI controls
-        self.renameThisTextField.isEditable = false
-        self.replaceWithTextField.isEditable = false
-        self.browseButton.isEnabled = false
-        self.renameButton.isEnabled = false
-        self.replaceWithNoneCheckbox.isEnabled = false
-
-        // Bind notification listener
-        self.notificationCenter.addObserver(self,
-                                            selector: #selector(onRenameSuccess(notification:)),
-                                            name: .renameSuccess,
-                                            object: nil)
-        self.notificationCenter.addObserver(self,
-                                            selector: #selector(onRenameError(notification:)),
-                                            name: .renameError,
-                                            object: nil)
-
-        let params: [String: Any] = [
-            "filePath": self.browseTextField.stringValue,
-            "renameText": self.renameThisTextField.stringValue,
-            "replaceText": self.replaceWithTextField.stringValue,
-            "fileType": NSNumber(value: self.fileType.selectedColumn)
-        ]
-        Thread.detachNewThreadSelector(#selector(doRename(params:)), toTarget: self, with: params)
+        self.viewModel.rename(type: renameType, in: directoryPath, occurrences: occurrences, replacement: replacement) { [weak self] error in
+            if let error = error {
+                self?.state = .error(type: error)
+            } else {
+                self?.state = .idle
+            }
+        }
     }
 
     @IBAction
@@ -103,72 +107,52 @@ final class MainViewController: NSObject {
         }
     }
 
-    // MARK: - Notification handling
+    // MARK: - View states
 
-    @objc
-    private func onRenameSuccess(notification: NSNotification) {
-        DispatchQueue.main.async {
-            self.onRenameFinish()
-            self.statusTextField.stringValue = "Files were renamed successfully".localized
+    private func moveToIdleState() {
+        self.enableUserInteraction(true)
+        self.enableProgressIndicators(true)
+
+        self.statusTextField.textColor = .controlTextColor
+        self.statusTextField.stringValue = self.viewModel.renamedSuccessfullyMessage
+    }
+
+    private func moveToErrorState(type errorType: ErrorType) {
+        self.enableUserInteraction(true)
+        self.enableProgressIndicators(true)
+
+        self.statusTextField.textColor = .red
+        self.statusTextField.stringValue = self.viewModel.message(forError: errorType)
+    }
+
+    private func moveToProcessingState() {
+        self.enableUserInteraction(false)
+        self.enableProgressIndicators(false)
+    }
+
+    // MARK: - View updates
+
+    private func enableProgressIndicators(_ isEnabled: Bool) {
+        self.progressIndicator.isHidden = isEnabled
+
+        if isEnabled {
+            self.progressIndicator.stopAnimation(self)
+        } else {
+            self.progressIndicator.startAnimation(self)
+            self.statusTextField.textColor = .controlTextColor
+            self.statusTextField.stringValue = self.viewModel.renamingMessage
         }
     }
 
-    @objc
-    private func onRenameError(notification: NSNotification) {
-        DispatchQueue.main.async {
-            self.onRenameFinish()
-            self.statusTextField.textColor = .red
+    private func enableUserInteraction(_ isEnabled: Bool) {
+        self.renameThisTextField.isEditable = isEnabled
+        self.replaceWithTextField.isEditable = isEnabled
+        self.browseButton.isEnabled = isEnabled
+        self.renameButton.isEnabled = isEnabled
+        self.replaceWithNoneCheckbox.isEnabled = isEnabled
 
-            if let errorCode = notification.object as? NSNumber, errorCode.intValue == ErrorType.partially.rawValue {
-                self.statusTextField.stringValue = "Not all files have been renamed".localized
-            } else {
-                self.statusTextField.stringValue = "Cannot rename files".localized
-            }
-        }
-    }
-
-    private func onRenameFinish() {
-        // Stop notification listeners
-        self.notificationCenter.removeObserver(self, name: .renameSuccess, object: nil)
-        self.notificationCenter.removeObserver(self, name: .renameError, object: nil)
-
-        // Update UI
-        self.progressIndicator.stopAnimation(self)
-        self.progressIndicator.isHidden = true
-        self.statusTextField.stringValue = "Files were renamed successfully".localized
-
-        // Enable UI controler
-        self.renameThisTextField.isEditable = true
-        self.replaceWithTextField.isEditable = true
-        self.browseButton.isEnabled = true
-        self.renameButton.isEnabled = true
-        self.replaceWithNoneCheckbox.isEnabled = true
-        self.replaceWithNoneChanged(self.replaceWithNoneCheckbox)
-    }
-
-    // MARK: - Business
-
-    @objc
-    private func doRename(params: [String: Any]) {
-        guard let fileTypeNumber = params["fileType"] as? NSNumber,
-            let fileType = RenameType(rawValue: fileTypeNumber.intValue),
-            let filePath = params["filePath"] as? String,
-            let renameText = params["renameText"] as? String,
-            let replaceText = params["replaceText"] as? String else {
-            let notification = Notification(name: .renameError,
-                                            object: NSNumber(value: ErrorType.unknown.rawValue),
-                                            userInfo: nil)
-            self.notificationCenter.post(notification)
-            return
-        }
-
-        self.viewModel.rename(type: fileType, in: filePath, occurrences: renameText, replacement: replaceText) { error in
-            if let error = error {
-                let notification = Notification(name: .renameError, object: NSNumber(value: error.rawValue))
-                self.notificationCenter.post(notification)
-            } else {
-                self.notificationCenter.post(name: .renameSuccess, object: nil)
-            }
+        if isEnabled {
+            self.replaceWithNoneChanged(self.replaceWithNoneCheckbox)
         }
     }
 }
