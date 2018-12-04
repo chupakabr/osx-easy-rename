@@ -12,7 +12,7 @@ import AppKit
 final class MainViewController: NSObject {
 
     private let notificationCenter = NotificationCenter.default
-    private let fileManager = FileManager.default
+    private let viewModel: MainViewModelProtocol
 
     // MARK: - IB Outlets
 
@@ -26,9 +26,16 @@ final class MainViewController: NSObject {
     @IBOutlet var replaceWithNoneCheckbox: NSButton!
     @IBOutlet var fileType: NSMatrix!
 
+    override init() {
+        let renamingService = RenamingService(fileManager: FileManager.default)
+        self.viewModel = MainViewModel(renamingService: renamingService)
+        super.init()
+    }
+
     // MARK: - Actions
 
-    @IBAction func browse(_ sender: Any) {
+    @IBAction
+    func browse(_ sender: Any) {
         let dlg = NSOpenPanel()
         dlg.canChooseFiles = false
         dlg.canChooseDirectories = true
@@ -41,7 +48,8 @@ final class MainViewController: NSObject {
         }
     }
 
-    @IBAction func rename(_ sender: Any) {
+    @IBAction
+    func rename(_ sender: Any) {
         if self.browseTextField.stringValue.isEmpty {
             self.statusTextField.stringValue = "Directory must be specified".localized
             return
@@ -85,7 +93,8 @@ final class MainViewController: NSObject {
         Thread.detachNewThreadSelector(#selector(doRename(params:)), toTarget: self, with: params)
     }
 
-    @IBAction func replaceWithNoneChanged(_ sender: NSButton) {
+    @IBAction
+    func replaceWithNoneChanged(_ sender: NSButton) {
         if sender.intValue != 0 {
             self.replaceWithTextField.stringValue = ""
             self.replaceWithTextField.isEnabled = false
@@ -141,8 +150,6 @@ final class MainViewController: NSObject {
 
     @objc
     private func doRename(params: [String: Any]) {
-        var processedFiles = 0
-
         guard let fileTypeNumber = params["fileType"] as? NSNumber,
             let fileType = RenameType(rawValue: fileTypeNumber.intValue),
             let filePath = params["filePath"] as? String,
@@ -155,60 +162,13 @@ final class MainViewController: NSObject {
             return
         }
 
-        let filePathUrl = URL(fileURLWithPath: filePath)
-        NSLog("FileType: %d", fileType.rawValue)
-
-        var potentialFiles: [String]?
-        do {
-            potentialFiles = try self.fileManager.contentsOfDirectory(atPath: filePath)
-        } catch {
-            potentialFiles = nil
-        }
-
-        var hasErrors = false
-        if let files = potentialFiles, !files.isEmpty {
-            var isDir: ObjCBool = false
-            var needRename = false
-            let filePattern = NSPredicate(format: "self CONTAINS[c] %@", renameText)
-
-            for file in files {
-                if filePattern.evaluate(with: file) {
-                    let fromFile = filePathUrl.appendingPathComponent(file)
-                    _ = self.fileManager.fileExists(atPath: fromFile.absoluteString, isDirectory: &isDir)
-
-                    switch fileType {
-                    case .files:
-                        needRename = isDir.boolValue == false
-                    case .folders:
-                        needRename = isDir.boolValue == true
-                    case .both:
-                        needRename = true
-                    }
-
-                    if needRename {
-                        let newFileName = file.replacingOccurrences(of: renameText, with: replaceText)
-                        let toFile = filePathUrl.appendingPathComponent(newFileName)
-
-                        do {
-                            try self.fileManager.moveItem(at: fromFile, to: toFile)
-                            processedFiles += 1
-                        } catch {
-                            hasErrors = true
-                            NSLog("ERROR Failed to rename: \(file)")
-                        }
-                    }
-                }
+        self.viewModel.rename(type: fileType, in: filePath, occurrences: renameText, replacement: replaceText) { error in
+            if let error = error {
+                let notification = Notification(name: .renameError, object: NSNumber(value: error.rawValue))
+                self.notificationCenter.post(notification)
+            } else {
+                self.notificationCenter.post(name: .renameSuccess, object: nil)
             }
-        } else {
-            hasErrors = true
-        }
-
-        if hasErrors {
-            let error: ErrorType = processedFiles > 0 ? .partially : .unknown
-            let notification = Notification(name: .renameError, object: NSNumber(value: error.rawValue))
-            self.notificationCenter.post(notification)
-        } else {
-            self.notificationCenter.post(name: .renameSuccess, object: nil)
         }
     }
 }

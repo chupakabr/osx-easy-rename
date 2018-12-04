@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		3E35F14514BEE7A400AA2F5C /* default.icns in Resources */ = {isa = PBXBuildFile; fileRef = 3E35F14414BEE7A400AA2F5C /* default.icns */; };
+		3E79033021B5F563002CE907 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E79032F21B5F563002CE907 /* MainViewModel.swift */; };
+		3E79033321B5F7CB002CE907 /* RenamingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E79033221B5F7CB002CE907 /* RenamingService.swift */; };
 		3EB7F9FA13BDF6AB00BCDAAD /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EB7F9F913BDF6AB00BCDAAD /* Cocoa.framework */; };
 		3EB7FA0413BDF6AB00BCDAAD /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3EB7FA0213BDF6AB00BCDAAD /* Localizable.strings */; };
 		3EB7FA0713BDF6AB00BCDAAD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EB7FA0613BDF6AB00BCDAAD /* main.m */; };
@@ -16,13 +18,14 @@
 		3EFD5CB621B46E0000B12818 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EFD5CB521B46E0000B12818 /* AppDelegate.swift */; };
 		3EFD5CB821B473B600B12818 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EFD5CB721B473B600B12818 /* MainViewController.swift */; };
 		3EFD5CBA21B47C1000B12818 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EFD5CB921B47C1000B12818 /* Notifications.swift */; };
-		3EFD5CBC21B47EB600B12818 /* ErrorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EFD5CBB21B47EB600B12818 /* ErrorType.swift */; };
 		3EFD5CBE21B47F1900B12818 /* RenameType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EFD5CBD21B47F1900B12818 /* RenameType.swift */; };
 		3EFD5CC321B481BF00B12818 /* Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EFD5CC221B481BF00B12818 /* Localization.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		3E35F14414BEE7A400AA2F5C /* default.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = default.icns; sourceTree = "<group>"; };
+		3E79032F21B5F563002CE907 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		3E79033221B5F7CB002CE907 /* RenamingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RenamingService.swift; sourceTree = "<group>"; };
 		3EB7F9F513BDF6AB00BCDAAD /* EasyRename.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EasyRename.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3EB7F9F913BDF6AB00BCDAAD /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		3EB7F9FC13BDF6AB00BCDAAD /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -41,7 +44,6 @@
 		3EFD5CB521B46E0000B12818 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3EFD5CB721B473B600B12818 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		3EFD5CB921B47C1000B12818 /* Notifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notifications.swift; sourceTree = "<group>"; };
-		3EFD5CBB21B47EB600B12818 /* ErrorType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorType.swift; sourceTree = "<group>"; };
 		3EFD5CBD21B47F1900B12818 /* RenameType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RenameType.swift; sourceTree = "<group>"; };
 		3EFD5CC221B481BF00B12818 /* Localization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localization.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -58,6 +60,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3E79032E21B5F53F002CE907 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				3EFD5CC221B481BF00B12818 /* Localization.swift */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		3E79033121B5F7BB002CE907 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				3E79033221B5F7CB002CE907 /* RenamingService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		3EB7F9EA13BDF6AB00BCDAAD = {
 			isa = PBXGroup;
 			children = (
@@ -122,6 +140,7 @@
 			isa = PBXGroup;
 			children = (
 				3EFD5CC021B47F3600B12818 /* Model */,
+				3E79032E21B5F53F002CE907 /* Util */,
 				3EFD5CC121B47F4F00B12818 /* UI */,
 				3EFD5CB521B46E0000B12818 /* AppDelegate.swift */,
 			);
@@ -131,8 +150,8 @@
 		3EFD5CC021B47F3600B12818 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				3EFD5CBB21B47EB600B12818 /* ErrorType.swift */,
-				3EFD5CC221B481BF00B12818 /* Localization.swift */,
+				3E79033121B5F7BB002CE907 /* Services */,
+				3E79032F21B5F563002CE907 /* MainViewModel.swift */,
 				3EFD5CB921B47C1000B12818 /* Notifications.swift */,
 				3EFD5CBD21B47F1900B12818 /* RenameType.swift */,
 			);
@@ -221,12 +240,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				3EFD5CBA21B47C1000B12818 /* Notifications.swift in Sources */,
-				3EFD5CBC21B47EB600B12818 /* ErrorType.swift in Sources */,
 				3EFD5CB621B46E0000B12818 /* AppDelegate.swift in Sources */,
 				3EB7FA0713BDF6AB00BCDAAD /* main.m in Sources */,
+				3E79033321B5F7CB002CE907 /* RenamingService.swift in Sources */,
 				3EFD5CBE21B47F1900B12818 /* RenameType.swift in Sources */,
 				3EFD5CC321B481BF00B12818 /* Localization.swift in Sources */,
 				3EFD5CB821B473B600B12818 /* MainViewController.swift in Sources */,
+				3E79033021B5F563002CE907 /* MainViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
