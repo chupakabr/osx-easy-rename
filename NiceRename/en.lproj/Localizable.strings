@@ -3,6 +3,6 @@
 "Directory must be specified" = "Directory must be specified";
 "Filename text must be set" = "Filename text must be set";
 "Renaming..." = "Renaming...";
-"Files were renamed successfully" = "All files has been renamed successfully";
+"Files were renamed successfully" = "All files have been renamed successfully";
 "Not all files have been renamed" = "Failed to rename some of the files";
 "Cannot rename files" = "Cannot rename files";
