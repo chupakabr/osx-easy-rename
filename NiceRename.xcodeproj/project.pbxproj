@@ -36,6 +36,7 @@
 		3EB7FA0613BDF6AB00BCDAAD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		3EB7FA0913BDF6AB00BCDAAD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
 		3EB7FA0F13BDF6AB00BCDAAD /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		3EEC844221C1CB350061211B /* EasyRename.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = EasyRename.entitlements; sourceTree = "<group>"; };
 		3EEDF55B14BCD43A00D62825 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		3EEDF55C14BCD44200D62825 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = ru; path = ru.lproj/Credits.rtf; sourceTree = "<group>"; };
 		3EEDF55E14BCDC0200D62825 /* ru */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ru; path = ru.lproj/MainMenu.xib; sourceTree = "<group>"; };
@@ -77,6 +78,7 @@
 		3EB7F9EA13BDF6AB00BCDAAD = {
 			isa = PBXGroup;
 			children = (
+				3EEC844221C1CB350061211B /* EasyRename.entitlements */,
 				3EB7F9FF13BDF6AB00BCDAAD /* NiceRename */,
 				3EB7F9F813BDF6AB00BCDAAD /* Frameworks */,
 				3EB7F9F613BDF6AB00BCDAAD /* Products */,
@@ -196,6 +198,11 @@
 						DevelopmentTeam = 5JWCG4D3RR;
 						LastSwiftMigration = 1010;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -363,6 +370,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_ENTITLEMENTS = EasyRename.entitlements;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -394,6 +402,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_ENTITLEMENTS = EasyRename.entitlements;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
