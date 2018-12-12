@@ -54,6 +54,50 @@
                         </items>
                     </menu>
                 </menuItem>
+                <menuItem title="Edit" id="OUt-Ex-Znj">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <menu key="submenu" title="Edit" id="eLI-Xx-2d9">
+                        <items>
+                            <menuItem title="Undo" keyEquivalent="z" id="Znh-h3-as9">
+                                <connections>
+                                    <action selector="undo:" target="-1" id="dEV-c7-vSf"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Redo" keyEquivalent="Z" id="DV4-P4-DY5">
+                                <connections>
+                                    <action selector="redo:" target="-1" id="GzU-wO-LmU"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem isSeparatorItem="YES" id="Z4F-gF-2Lq"/>
+                            <menuItem title="Cut" keyEquivalent="x" id="BPS-gK-b9Y">
+                                <connections>
+                                    <action selector="cut:" target="-1" id="A3x-AG-LjO"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Copy" keyEquivalent="c" id="pua-YJ-Kgd">
+                                <connections>
+                                    <action selector="copy:" target="-1" id="2JY-7c-VZS"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Paste" keyEquivalent="v" id="Xmj-4F-59l">
+                                <connections>
+                                    <action selector="paste:" target="-1" id="rlm-ci-Ozs"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Delete" id="2ur-Qd-2lu">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="delete:" target="-1" id="McP-AR-ClE"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Select All" keyEquivalent="a" id="hy3-gA-Z4x">
+                                <connections>
+                                    <action selector="selectAll:" target="-1" id="ho3-3h-akH"/>
+                                </connections>
+                            </menuItem>
+                        </items>
+                    </menu>
+                </menuItem>
                 <menuItem title="Help" id="490">
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <menu key="submenu" title="Help" systemMenu="help" id="491">
@@ -67,6 +111,7 @@
                     </menu>
                 </menuItem>
             </items>
+            <point key="canvasLocation" x="-41" y="311"/>
         </menu>
         <window title="Easy File Rename" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" animationBehavior="default" id="371">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES"/>

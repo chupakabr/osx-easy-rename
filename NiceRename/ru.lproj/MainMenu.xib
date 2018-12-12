@@ -54,6 +54,50 @@
                         </items>
                     </menu>
                 </menuItem>
+                <menuItem title="Edit" id="9e9-0V-yJq">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <menu key="submenu" title="Edit" id="tDV-aD-RRC">
+                        <items>
+                            <menuItem title="Отменить" keyEquivalent="z" id="OPt-Jf-NxD">
+                                <connections>
+                                    <action selector="undo:" target="-1" id="eAm-Rh-20l"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Вернуть" keyEquivalent="Z" id="KbV-fy-o5f">
+                                <connections>
+                                    <action selector="redo:" target="-1" id="jDW-Sd-7vu"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem isSeparatorItem="YES" id="M2u-yR-DOq"/>
+                            <menuItem title="Вырезать" keyEquivalent="x" id="uSx-7A-VxM">
+                                <connections>
+                                    <action selector="cut:" target="-1" id="acR-XZ-CMM"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Копировать" keyEquivalent="c" id="iRC-RZ-Kxx">
+                                <connections>
+                                    <action selector="copy:" target="-1" id="Eph-zN-BPC"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Вставить" keyEquivalent="v" id="Vah-qT-RtW">
+                                <connections>
+                                    <action selector="paste:" target="-1" id="PXH-49-meA"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Удалить" id="3Vi-0m-8Jw">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="delete:" target="-1" id="aUk-1h-H35"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Выбрать все" keyEquivalent="a" id="3nR-LU-68j">
+                                <connections>
+                                    <action selector="selectAll:" target="-1" id="2L3-Xu-uMJ"/>
+                                </connections>
+                            </menuItem>
+                        </items>
+                    </menu>
+                </menuItem>
                 <menuItem title="Помощь" id="490">
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <menu key="submenu" title="Помощь" systemMenu="help" id="491">
