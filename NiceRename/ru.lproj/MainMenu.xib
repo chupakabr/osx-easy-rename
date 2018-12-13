@@ -54,9 +54,9 @@
                         </items>
                     </menu>
                 </menuItem>
-                <menuItem title="Edit" id="9e9-0V-yJq">
+                <menuItem title="Редактирование" id="9e9-0V-yJq">
                     <modifierMask key="keyEquivalentModifierMask"/>
-                    <menu key="submenu" title="Edit" id="tDV-aD-RRC">
+                    <menu key="submenu" title="Редактирование" id="tDV-aD-RRC">
                         <items>
                             <menuItem title="Отменить" keyEquivalent="z" id="OPt-Jf-NxD">
                                 <connections>
@@ -93,18 +93,6 @@
                             <menuItem title="Выбрать все" keyEquivalent="a" id="3nR-LU-68j">
                                 <connections>
                                     <action selector="selectAll:" target="-1" id="2L3-Xu-uMJ"/>
-                                </connections>
-                            </menuItem>
-                        </items>
-                    </menu>
-                </menuItem>
-                <menuItem title="Помощь" id="490">
-                    <modifierMask key="keyEquivalentModifierMask"/>
-                    <menu key="submenu" title="Помощь" systemMenu="help" id="491">
-                        <items>
-                            <menuItem title="Помощь по EasyRename" keyEquivalent="?" id="492">
-                                <connections>
-                                    <action selector="showHelp:" target="-1" id="493"/>
                                 </connections>
                             </menuItem>
                         </items>
